@@ -32,9 +32,8 @@
 }
 h1 {
   color: black;
-  display: inline;  /*no change*/
-  padding-left: 4vw;
-  padding-right: 4vw;
+  display: inline-block;  /*no change*/
+  margin: 0;
   transform: scale(1);
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
@@ -49,6 +48,7 @@ h1:hover {
   position: fixed;
   color: black;
   left: 50%;
+  background: linear-gradient(180deg, rgba(225, 0, 0, 0.75) 10.94%, rgba(255, 255, 55, 0.75) 100%);;
   transform: translate(-50%,0);
   font-family: 'Roboto', sans-serif;
   text-align: center;
@@ -56,6 +56,10 @@ h1:hover {
   font-size: 1vh;
   display: flex;
   justify-content: space-between;
+  border: solid black;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 .index-popup {
   background: rgb(255,255,255);
