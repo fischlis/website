@@ -1,27 +1,32 @@
-
-
+body {
+  margin: 0;
+}
+p,a,h1 {
+  font-family: 'Inter', sans-serif;
+}
 
 .imgafjsldkfj {
   width: 20vw;
 }
 
-#text {
+.text {
   font-family: 'Inter', sans-serif;
   font-size: 1.75vh;
-  text-align: left;
-  margin: 0.75vw;
+  margin: 1vw;
 }
 
-#title {
+.title {
   font-family: 'Inter', sans-serif;
   font-size: 2.5vh;
-  margin-left: 0;
+  width: 100%;
+  margin: 1vw;
 }
 #cover_text {
   font-family: 'Inter', sans-serif;
   font-size: 1.25vh;
   text-align: center;
   margin: 0.5vw;
+  width: 100%;
 }
 .index-container {
   position: absolute; /* no change*/
@@ -56,10 +61,11 @@ h1:hover {
   font-size: 1vh;
   display: flex;
   justify-content: space-between;
-  border: solid black;
+  border: solid red 1px;
   border-radius: 8px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 1%;
 }
 .index-popup {
   background: rgb(255,255,255);
@@ -147,11 +153,6 @@ h1:hover {
   margin-right: auto;
   margin-bottom: 2%;
 }
-#index-popup0-container {
-  position: absolute; /* no change*/
-  width: 15vw; /* no change*/
-  height: 30vh; /* no change*/
-}
 #index-popup0 {
   width: 100%; /* no change*/
   height: 100%; /* no change*/
@@ -172,11 +173,6 @@ h1:hover {
   margin: 0.5vw;
 }
 
-#index-popup1-container {
-  position: absolute; /* no change*/
-  width: 15vw; /* no change*/
-  height: 30vh; /* no change*/
-}
 #index-popup1 {
   width: 100%; /* no change*/
   height: 100%; /* no change*/
@@ -188,11 +184,6 @@ h1:hover {
   border-width: 1px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 0.25vh;
-}
-#index-popup2-container {
-  position: absolute; /* no change*/
-  width: 25vw; /* no change*/
-  height: 40vh; /* no change*/
 }
 
 #index-popup2 {
@@ -227,12 +218,6 @@ h1:hover {
   padding: 0.15vh;
 }
 
-#index-popup4-container {
-  position: absolute; /* no change*/
-  width: 25vw; /* no change*/
-  height: 40vh; /* no change*/
-}
-
 #index-popup4 {
   width: 100%; /* no change*/
   height: 100%; /* no change*/
@@ -245,12 +230,6 @@ h1:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 0.15vh;
 
-}
-
-#index-popup5-container {
-  position: absolute; /* no change*/
-  width: 25vw; /* no change*/
-  height: 40vh; /* no change*/
 }
 
 #index-popup5 {
@@ -271,83 +250,42 @@ h1:hover {
   background: rgb(255,255,255);
   background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,0,0,1) 100%);
 }
-.container_0{
-  margin: 2rem;
+.slider {
   display: flex;
-  justify-content: space-around;
-}
-.slider_0{
-  width: 80vw;
-  left: 50%;
-  right: 50%;
-  display: flex;
+  width: 100%;
   flex-wrap: wrap;
-  justify-content: space-between;
+  gap: 20px;
+  justify-content: center;
+  flex-direction: row;
+  align-content: space-between;
 }
-.slider_0 img {
-  margin: 0.15vw;
-  width: 25vw;
-  object-fit: cover;
-  aspect-ratio: 1 / 1.45;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.container_1{
-  margin: 4rem 6.8rem 2rem;
-  display: flex;
-  justify-content: space-between;
-}
-.slider_1{
-  width: 80vw;
-  left: 50%;
-  right: 50%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.slider_1 img {
-  margin: 0.5vw;
-  width: 14vw;
-  object-fit: cover;
-  aspect-ratio: 1/1;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+.slider img {
+  position: relative;
+  width: 18%;
   border-radius: 6px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: width 0.5s;
 }
-.slider_2 img {
-  margin: 0.15vw;
-  width: 15vw;
-  object-fit: cover;
-  aspect-ratio: 1/1;
+.slider img:hover {
+  cursor: pointer;
+}
+.slider video {
+  width: 18%;
   border-radius: 6px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.slider_2{
-  width: 80vw;
-  left: 50%;
-  right: 50%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.container_2{
-  margin: 4rem 6.8rem 2rem;
+.container {
+  margin: 2%;
   flex-direction: column;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 50px;
 }
-.slider_3 img {
-  margin: 0.15vw;
-  width: 15vw;
-  object-fit: cover;
-  aspect-ratio: 1/1;
+.container_text {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 6px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.container_3 {
-  margin: 4rem 6.8rem 2rem;
-  flex-direction: column;
-  display: flex;
-  justify-content: space-between;
 }
 .container_4{
   margin: 4rem 3rem 2rem;
@@ -362,24 +300,9 @@ h1:hover {
   border-radius: 6px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.index-popup-big p {
-  font-size: medium;
-  position: relative;
-  display: block;
-  margin: 1vw;
-  width: 40vw;
-  text-align: left;
-  padding-left: 8.5vw;
-
-}
-.index-popup-big:hover {
-  cursor: pointer; /* no change*/
-}
-
 #index-popup0-big {
   position: absolute; /* no change*/
   width: 95vw;
-  height: 95vh;
   background-image: linear-gradient(rgba(224, 235, 239, 0.826), rgba(148, 228, 255, 0.786)) ;
   backdrop-filter: blur(3px);
 
@@ -398,7 +321,6 @@ h1:hover {
 
   position: absolute; /* no change*/
   width: 95vw; 
-  height: 95vh;
   background-image: linear-gradient(180deg, rgba(172, 4, 4, 0.75) 0%, rgba(255, 104, 158, 0.75) 48.96%, rgba(255, 198, 235, 0.75) 100%);
   backdrop-filter: blur(3px);
   border-radius: 8px; 
@@ -411,16 +333,10 @@ h1:hover {
   color: black;
 
 }
-#index-popup1-big p {
-  text-align: center;
-  left: 50%;
-  transform: translate(-60%);
-}
 
 #index-popup2-big {
   position: absolute; /* no change*/
   width: 95vw;
-  height: 95vh;
   background-image: linear-gradient(180deg, rgba(103, 103, 103, 0.75) 2.6%, rgba(181, 181, 181, 0.75) 100%);
   backdrop-filter: blur(3px);
 
@@ -437,7 +353,6 @@ h1:hover {
 #index-popup3-big {
   position: absolute; /* no change*/
   width: 95vw;
-  height: 95vh;
   background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.75) 2.6%, rgba(194, 194, 194, 0.75) 100%);
   backdrop-filter: blur(3px);
 
@@ -454,7 +369,6 @@ h1:hover {
 #index-popup4-big {
   position: absolute; /* no change*/
   width: 95vw;
-  height: 95vh;
   background-image:linear-gradient(180deg, rgba(255, 217, 253, 0.75) 0%, rgba(255, 97, 249, 0.75) 100%);
   backdrop-filter: blur(3px);
 
@@ -471,7 +385,6 @@ h1:hover {
 #index-popup5-big {
   position: absolute; /* no change*/
   width: 95vw;
-  height: 95vh;
   background-image:linear-gradient(180deg, rgba(39, 42, 129, 0.90) 0%, rgba(76, 83, 248, 0.90) 100%);
   backdrop-filter: blur(3px);
 
@@ -483,6 +396,14 @@ h1:hover {
   left: 50%; /* no change*/
   top: 50%; /* no change*/
   transform: translate(-50%,-50%); /* no change*/
+}
+#big-bg {
+  display: none;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(10px);
+  z-index: 98;
 }
 .index-info {
   position: absolute; /* no change*/
@@ -501,9 +422,30 @@ h1:hover {
   display: none; /* no change*/
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.form_aristokrat input[type="text_form"]{
+.form_aristokrat {
+  position: relative;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.form_aristokrat input {
+  height: 100%;
+  width: 10%;
   border: none;
   background: none;
+  -webkit-appearance: none;
+  appearance: none;
+  text-align: center;
+  font-family: Aristokrat;
+  font-size: 1000%;
+  color: rgba(119, 255, 116, 0.75);
+  outline: none;
+}
+@font-face {
+  font-family: Aristokrat;
+  src: url(assets/fonts/Aristokrat-Regular.otf);
 }
 h2 {
   font-family: 'Roboto', sans-serif;
@@ -515,5 +457,36 @@ h2 {
 @media (max-width: 600px) {
   h1 {
     color: blue;
+  }
+  .index-closeBTN {
+    width: 4vw;
+    height: 4vw;
+  }
+  .futurism {
+    width: 60vw;
+  }
+  .raf_cover {
+    width: 60vw;
+  }
+  .satoshi_g {
+    width: 70vw;
+    }
+  .type-illu {
+    width: 80vw;
+  }
+  #illu_video {
+    width: 50vw;
+  }
+  #video_rtfm01 {
+    width: 60vw;
+  }
+  #video_cover {
+    width: 100%;
+  }
+  .index-info h2 {
+    font-size: 4vw;
+  }
+  #cover_text {
+    font-size: 3vw;
   }
 }

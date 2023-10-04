@@ -29,8 +29,8 @@
        <div class="index-popup-container" id="index-popup0-container">
         <div class="index-popup" id="index-popup0" onclick="openBig()"> 
 
-          <p id="cover_text">satoshi_kon.pdf</p>
-          <img class="satoshi_g" src="/assets/images/popup_folder_1/Satoshi_Kon_2880px.jpg"> <!-- beispiel -->
+          <p id="cover_text" style="pointer-events: none;">satoshi_kon.pdf</p>
+          <img class="satoshi_g" style="pointer-events: none;" src="/assets/images/popup_folder_1/Satoshi_Kon_2880px.jpg"> <!-- beispiel -->
 
         </div>
           <div class="index-closeBTN" id="index-closeBTN0" onclick="newPopUp()">
@@ -42,7 +42,7 @@
 
           <!-- put 2 work here -->
          <!-- <img class="type-illu" src="/assets/images/popup_folder_2/Fischli.png"> --> 
-          <video loop autoplay muted id="illu_video">
+          <video style="pointer-events: none;" loop autoplay muted id="illu_video">
             <source src="assets/images/popup_folder_2/video_cover_illu.MP4" class="video/mp4" id="type_video">
           </video>
         </div>
@@ -52,8 +52,8 @@
 
       <div class="index-popup-container" id="index-popup2-container">
         <div class="index-popup" id="index-popup2" onclick="openBig()">
-          <p id="cover_text">futurist_manifest.pdf</p>
-          <img class="futurism" src="/assets/images/popup_folder_3/futurism.jpg">
+          <p style="pointer-events: none;" id="cover_text">futurist_manifest.pdf</p>
+          <img style="pointer-events: none;" class="futurism" src="/assets/images/popup_folder_3/futurism.jpg">
           <!-- put 3 work here -->
 
         </div>
@@ -63,8 +63,8 @@
 
       <div class="index-popup-container" id="index-popup3-container">
         <div class="index-popup" id="index-popup3" onclick="openBig()">
-          <p id="cover_text"> raf-diognes.png</p>
-          <img class="raf_cover" src="assets/images/popup_folder_4/RAF_Social_media5.jpg">
+          <p style="pointer-events: none;" id="cover_text"> raf-diognes.png</p>
+          <img style="pointer-events: none;" class="raf_cover" src="assets/images/popup_folder_4/RAF_Social_media5.jpg">
           <!-- put 4 work here -->
 
         </div>
@@ -74,9 +74,9 @@
 
       <div class="index-popup-container" id="index-popup4-container">
         <div class="index-popup" id="index-popup4" onclick="openBig()">
-          <div class="video_rtfm" id="video_rtfm01">
-            <p id="cover_text"> rendered_videos.zip</p>
-            <video loop autoplay muted id="video_cover">
+          <div style="pointer-events: none;" class="video_rtfm" id="video_rtfm01">
+            <p style="pointer-events: none;" id="cover_text"> rendered_videos.zip</p>
+            <video style="pointer-events: none;" loop autoplay muted id="video_cover">
              <source src="assets/images/popup_folder_5/rtfm_nightcore.MP4" class="video/mp4" id="rtfm_01">
             </video>
           <!-- put 5 work here -->
@@ -88,8 +88,8 @@
 
       <div class="index-popup-container" id="index-popup5-container">
         <div class="index-popup" id="index-popup5" onclick="openBig()">
-          <p id="cover_text"> aristokrat.glyph</p>
-          <img class="aristokrat_cover" src="assets/images/popup_folder_6/aristokrat4.png">
+          <p style="pointer-events: none;" id="cover_text"> aristokrat.glyph</p>
+          <img style="pointer-events: none;" class="aristokrat_cover" src="assets/images/popup_folder_6/aristokrat4.png">
          
           <!-- put 6 work here -->
 
@@ -101,73 +101,79 @@
       
       <!-- popups big -->
       <div class="index-popup-big" id="index-popup0-big">
-        <div class="container_0">
-            <div class="slider_0">
-              <img src="assets/images/popup_folder_1/Satoshi_Kon_2880px.jpg" id="satoshi_slide_02">
-              <img src="assets/images/popup_folder_1/satoshi_mockup_klein.jpg" id="satoshi_slide_01">      
-              <img src="assets/images/popup_folder_1/satoshi_orange_2880.jpg" id="satoshi_slide_03">
+        <div class="container">
+            <div class="slider">
+              <img onclick="imgBig()" src="assets/images/popup_folder_1/Satoshi_Kon_2880px.jpg" id="satoshi_slide_02">
+              <img onclick="imgBig()" src="assets/images/popup_folder_1/satoshi_mockup_klein.jpg" id="satoshi_slide_01">      
+              <img onclick="imgBig()" src="assets/images/popup_folder_1/satoshi_orange_2880.jpg" id="satoshi_slide_03">
+            </div>
+            <div class="container_text">
+              <p class="title"> Filmpodium Satoshi Kon</p>
+              <p class="text"> Meine beiden Plakate entstanden in Zusammenarbeit mit Valerie Rohner, im Rahmen des diesjährigen Filmpodiums. 
+              </p>
+              <p class="text"> Satoshi Kon zählt zu einem der einflussreichsten Mangaka & Anime-Regisseure. Sein Werk das sich vorzugsweise mit dem Thema Traumwelten und der Vermischung von Realität und Fiktion auseinandersetzt wurde zur Inspiration für unseren Prozess.
+                  
+                  Mithilfe von Midjourney liessen wir, über 2000 Interationen hinweg, Bilder aus seinem Werk generieren, die diese übernatürlichen Traumwelten aufgreifen und sichtbar machen. 
+                  
+              </p>
+              <p class="text"> Für die Typografie gestaltete ich eine Illustration die einerseits lesbar sein sollte und andererseits visuelle Eindrücke von japanischen Schriftzeichen aufgreift.
+              </p>
             </div>
         </div>
-      <p id="title"> Filmpodium Satoshi Kon</p>
-      <p id="text"> Meine beiden Plakate entstanden in Zusammenarbeit mit Valerie Rohner, im Rahmen des diesjährigen Filmpodiums. 
-      </p>
-      <p id="text"> Satoshi Kon zählt zu einem der einflussreichsten Mangaka & Anime-Regisseure. Sein Werk das sich vorzugsweise mit dem Thema Traumwelten und der Vermischung von Realität und Fiktion auseinandersetzt wurde zur Inspiration für unseren Prozess.
-          
-          Mithilfe von Midjourney liessen wir, über 2000 Interationen hinweg, Bilder aus seinem Werk generieren, die diese übernatürlichen Traumwelten aufgreifen und sichtbar machen. 
-          
-      </p>
-      <p id="text"> Für die Typografie gestaltete ich eine Illustration die einerseits lesbar sein sollte und andererseits visuelle Eindrücke von japanischen Schriftzeichen aufgreift.
-      </p>
         <!-- put 1 work big here -->
 
         <div class="index-closeBTN" id="index-closeBTN_big" onclick="closeBig()">
         </div>
       </div>
       <div class="index-popup-big" id="index-popup1-big">
-        <div class="container_1">
-          <div class="slider_1">
-            <img src="assets/images/popup_folder_2/type_1.jpg" id="type_slide_01">
-            <img src="assets/images/popup_folder_2/type_2.jpg" id="type_slide_02">      
-            <img src="assets/images/popup_folder_2/type_3.jpg" id="type_slide_03">
-            <img src="assets/images/popup_folder_2/type_4.jpg" id="type_slide_04">
-            <img src="assets/images/popup_folder_2/type_5.jpg" id="type_slide_05">      
-            <img src="assets/images/popup_folder_2/type_6.jpg" id="type_slide_06">
-            <img src="assets/images/popup_folder_2/type_7.jpg" id="type_slide_07">
-            <img src="assets/images/popup_folder_2/type_8.jpg" id="type_slide_08">      
-            <img src="assets/images/popup_folder_2/type_9.jpg" id="type_slide_09">
-            <img src="assets/images/popup_folder_2/type_10.jpg" id="type_slide_10">
-            <img src="assets/images/popup_folder_2/type_11.jpg" id="type_slide_11">      
-            <img src="assets/images/popup_folder_2/type_12.jpg" id="type_slide_12">
-            <img src="assets/images/popup_folder_2/type_13.jpg" id="type_slide_13">      
-            <img src="assets/images/popup_folder_2/type_14.jpg" id="type_slide_14">
-            <img src="assets/images/popup_folder_2/type_15.jpg" id="type_slide_15">
+        <div class="container">
+          <div class="slider">
+            <img style="width: 13%" onclick="imgBig()" src="assets/images/popup_folder_2/type_1.jpg" id="type_slide_01">
+            <img style="width: 13%" onclick="imgBig()" src="assets/images/popup_folder_2/type_2.jpg" id="type_slide_02">      
+            <img style="width: 13%" onclick="imgBig()" src="assets/images/popup_folder_2/type_3.jpg" id="type_slide_03">
+            <img style="width: 13%" onclick="imgBig()" src="assets/images/popup_folder_2/type_4.jpg" id="type_slide_04">
+            <img style="width: 13%" onclick="imgBig()" src="assets/images/popup_folder_2/type_5.jpg" id="type_slide_05">      
+            <img style="width: 13%" onclick="imgBig()" src="assets/images/popup_folder_2/type_6.jpg" id="type_slide_06">
+            <img style="width: 13%" onclick="imgBig()" src="assets/images/popup_folder_2/type_7.jpg" id="type_slide_07">
+            <img style="width: 13%" onclick="imgBig()" src="assets/images/popup_folder_2/type_8.jpg" id="type_slide_08">      
+            <img style="width: 13%" onclick="imgBig()" src="assets/images/popup_folder_2/type_9.jpg" id="type_slide_09">
+            <img style="width: 13%" onclick="imgBig()" src="assets/images/popup_folder_2/type_10.jpg" id="type_slide_10">
+            <img style="width: 13%" onclick="imgBig()" src="assets/images/popup_folder_2/type_11.jpg" id="type_slide_11">      
+            <img style="width: 13%" onclick="imgBig()" src="assets/images/popup_folder_2/type_12.jpg" id="type_slide_12">
+            <img style="width: 13%" onclick="imgBig()" src="assets/images/popup_folder_2/type_13.jpg" id="type_slide_13">      
+            <img style="width: 13%" onclick="imgBig()" src="assets/images/popup_folder_2/type_14.jpg" id="type_slide_14">
+            <img style="width: 13%" onclick="imgBig()" src="assets/images/popup_folder_2/type_15.jpg" id="type_slide_15">
+          </div>
+          <div class="container_text">
+            <p class="text">2048 x 2048px, RGB, type-illustration series, 2022-jetzt</p>
           </div>
         </div>
-        <p id="text">2048 x 2048px, RGB, type-illustration series, 2022-jetzt</p>
         <!-- put 2 work big here -->
 
         <div class="index-closeBTN" id="index-closeBTN_big" onclick="closeBig()">
         </div>
       </div>
       <div class="index-popup-big" id="index-popup2-big">
-        <div class="container_2">
-          <div class="slider_2">
-            <img src="assets/images/popup_folder_3/futurismus_.jpg" id="futuism_slide_01">
-            <img src="assets/images/popup_folder_3/futurismus_2.jpg" id="futuism_slide_02">      
-            <img src="assets/images/popup_folder_3/futurismus_3.jpg" id="futuism_slide_03">
-            <img src="assets/images/popup_folder_3/futurismus_4.jpg" id="futuism_slide_04">
-            <img src="assets/images/popup_folder_3/futurismus_5.jpg" id="futuism_slide_05">      
-            <img src="assets/images/popup_folder_3/futurismus_6.jpg" id="futuism_slide_06">
-            <img src="assets/images/popup_folder_3/futurismus_7.jpg" id="futuism_slide_07">
-            <img src="assets/images/popup_folder_3/futurismus_8.jpg" id="futuism_slide_08">      
-            <img src="assets/images/popup_folder_3/futurismus_10.jpg" id="futuism_slide_10">
-            <img src="assets/images/popup_folder_3/futurismus_11.jpg" id="futuism_slide_11">      
+        <div class="container">
+          <div class="slider">
+            <img onclick="imgBig()" src="assets/images/popup_folder_3/futurismus_.jpg" id="futuism_slide_01">
+            <img onclick="imgBig()" src="assets/images/popup_folder_3/futurismus_2.jpg" id="futuism_slide_02">      
+            <img onclick="imgBig()" src="assets/images/popup_folder_3/futurismus_3.jpg" id="futuism_slide_03">
+            <img onclick="imgBig()" src="assets/images/popup_folder_3/futurismus_4.jpg" id="futuism_slide_04">
+            <img onclick="imgBig()" src="assets/images/popup_folder_3/futurismus_5.jpg" id="futuism_slide_05">      
+            <img onclick="imgBig()" src="assets/images/popup_folder_3/futurismus_6.jpg" id="futuism_slide_06">
+            <img onclick="imgBig()" src="assets/images/popup_folder_3/futurismus_7.jpg" id="futuism_slide_07">
+            <img onclick="imgBig()" src="assets/images/popup_folder_3/futurismus_8.jpg" id="futuism_slide_08">      
+            <img onclick="imgBig()" src="assets/images/popup_folder_3/futurismus_10.jpg" id="futuism_slide_10">
+            <img onclick="imgBig()" src="assets/images/popup_folder_3/futurismus_11.jpg" id="futuism_slide_11">      
+          </div>
+          <div class="container_text">
+            <p class="title"> das futuristische Manifest</p>
+            <p class="text"> In einer Gegenüberstellung von Filippo Tommaso Marinettis Manifest mit Texten aus Ernst Jüngers “In Stahlgewittern” & “Abenteuerliches Herz” bilden sich kleine Schützengräben die von Grossaufnahmen eines Sportbogens unterbrochen werden.</p> 
+            <p class="text"> Der Pfeil und Bogen als futuristische Übersetzung eines prähistorischen Werkzeugs unterbricht die Komposition und imitiert die grosskalibrigen Kriegsmaschinen des Ersten Weltkriegs. In meiner Arbeit beschäftige ich mich mit dem Zeitgeist einer Epoche und den Gedanken eines kleinen Kettengliedes der grossen Kriegsmaschinerie.</p> 
+            <p class="text"> 205x240mm, 111 Seiten, 13 Bilder</p>
           </div>
         </div>
-        <p id="title"> das futuristische Manifest</p>
-        <p id="text"> In einer Gegenüberstellung von Filippo Tommaso Marinettis Manifest mit Texten aus Ernst Jüngers “In Stahlgewittern” & “Abenteuerliches Herz” bilden sich kleine Schützengräben die von Grossaufnahmen eines Sportbogens unterbrochen werden.</p> 
-        <p id="text"> Der Pfeil und Bogen als futuristische Übersetzung eines prähistorischen Werkzeugs unterbricht die Komposition und imitiert die grosskalibrigen Kriegsmaschinen des Ersten Weltkriegs. In meiner Arbeit beschäftige ich mich mit dem Zeitgeist einer Epoche und den Gedanken eines kleinen Kettengliedes der grossen Kriegsmaschinerie.</p> 
-        <p id="text"> 205x240mm, 111 Seiten, 13 Bilder</p> 
         
         <!-- put 3 work big here -->
         
@@ -175,30 +181,31 @@
         </div>
       </div>
       <div class="index-popup-big" id="index-popup3-big">
-        <div class="container_3">
-          <div class="slider_3">
-            <img src="assets/images/popup_folder_4/RAF_Social_media1.jpg" id="raf_slide_01">
-            <img src="assets/images/popup_folder_4/RAF_Social_media2.jpg" id="raf_slide_02">      
-            <img src="assets/images/popup_folder_4/RAF_Social_media3.jpg" id="raf_slide_03">
-            <img src="assets/images/popup_folder_4/RAF_Social_media4.jpg" id="raf_slide_04">
-            <img src="assets/images/popup_folder_4/RAF_Social_media5.jpg" id="raf_slide_05">      
-            <img src="assets/images/popup_folder_4/RAF_Social_media6.jpg" id="raf_slide_06">
-            <img src="assets/images/popup_folder_4/RAF_Social_media7.jpg" id="raf_slide_07">   
+        <div class="container">
+          <div class="slider">
+            <img onclick="imgBig()" src="assets/images/popup_folder_4/RAF_Social_media1.jpg" id="raf_slide_01">
+            <img onclick="imgBig()" src="assets/images/popup_folder_4/RAF_Social_media2.jpg" id="raf_slide_02">      
+            <img onclick="imgBig()" src="assets/images/popup_folder_4/RAF_Social_media3.jpg" id="raf_slide_03">
+            <img onclick="imgBig()" src="assets/images/popup_folder_4/RAF_Social_media4.jpg" id="raf_slide_04">
+            <img onclick="imgBig()" src="assets/images/popup_folder_4/RAF_Social_media5.jpg" id="raf_slide_05">      
+            <img onclick="imgBig()" src="assets/images/popup_folder_4/RAF_Social_media6.jpg" id="raf_slide_06">
+            <img onclick="imgBig()" src="assets/images/popup_folder_4/RAF_Social_media7.jpg" id="raf_slide_07">   
+          </div>
+          <div class="container_text">
+            <p class="title"> RAF SIMONS x Diogenes Verlag</p>
+            <p class="text"> Während einer transmedialen Zusammenarbeit zwischen Raf Simons und Diogenes fanden sich beide Brands unverhofft am Altar wieder. </p> 
+            <p class="text"> IN LOVE WE TRUST ist eine Serie von Produkten die einerseits das öffentliche Standing von Diogenes positiv beeinflussen, als auch einen krönenden Abschied von Raf Simons aus der Modewelt einleiten sollte. </p> 
+            <p class="text"> Die Kollektion spielt mit klassisch christlichen Hochzeitsbräuchen, einer allgegenwärtigen Präsenz von Punk und dem hoffnungsvollen Versprechen nach ewiger Liebe. </p> 
           </div>
         </div>
-        <p id="title"> RAF SIMONS x Diogenes Verlag</p>
-        <p id="text"> Während einer transmedialen Zusammenarbeit zwischen Raf Simons und Diogenes fanden sich beide Brands unverhofft am Altar wieder. </p> 
-        <p id="text"> IN LOVE WE TRUST ist eine Serie von Produkten die einerseits das öffentliche Standing von Diogenes positiv beeinflussen, als auch einen krönenden Abschied von Raf Simons aus der Modewelt einleiten sollte. </p> 
-        <p id="text"> Die Kollektion spielt mit klassisch christlichen Hochzeitsbräuchen, einer allgegenwärtigen Präsenz von Punk und dem hoffnungsvollen Versprechen nach ewiger Liebe. </p> 
-
         <!-- put 4 work big here -->
 
         <div class="index-closeBTN" id="index-closeBTN_big" onclick="closeBig()">
         </div>
       </div>
       <div class="index-popup-big" id="index-popup4-big">
-        <div class="container_4">
-          <div class="slider_4">
+        <div class="container">
+          <div class="slider">
             <video controls id="rendered_videos">
               <source src="assets/images/popup_folder_5/rtfm_nightcore.MP4" class="video/mp4" id="nightcore_video">
              </video>
@@ -220,15 +227,16 @@
       </div>
       <div class="index-popup-big" id="index-popup5-big">
         <div class="form_aristokrat">
-          <form>
-            <input type="text_form"> 
-          </form>
-         </div>
+          <input type="text_form" value="type your text"> 
+          <input type="text_form" value="type your text"> 
+          <input type="text_form" value="type your text"> 
+        </div>
         <!-- put 5 work big here -->
 
         <div class="index-closeBTN" id="index-closeBTN_big" onclick="closeBig()">
         </div>
       </div>
+      <div onclick="closeBig()" id="big-bg"></div>
     </div>
     <!-- info -->
     <div class="index-info" id="index-info">

@@ -20,11 +20,12 @@ const popups = [
   [popup5,popup5Big],
 ]
 const newPopUps = []
+const bg = document.getElementById("big-bg")
 let count = 0
+let idBig = 0
 getRandomArray(popups)
 randomPosition(popups)
 for (let i=0;i<popups.length;i++) {
-  console.log(i)
   popups[i][0].style.display = 'none'
   popups[i][1].style.display = 'none'
 }
@@ -32,8 +33,10 @@ let first = popups[0][0].cloneNode(true)
 first.id = count
 first.style.display = 'block'
 indexContainer.appendChild(first)
-
+newPopUps.push(first)
+console.log('%c  ♕ niki is king ♕  ','background: #ffffff; color: #00FF00')
 function closeAll() {
+  bg.style.display = 'none'
   for (let i=0;i<popups.length;i++) {
     popups[i][0].style.display = 'none'
     popups[i][1].style.display = 'none'
@@ -47,12 +50,21 @@ function closeAll() {
   }
 }
 function showAll() {
+  bg.style.display = 'none'
   for (let i=0;i<popups.length;i++) {
-    popups[i][0].style.display = 'block'
+    popups[i][0].style.display = 'none'
     popups[i][1].style.display = 'none'
+  }
+  if (newPopUps.length > 0) {
+    for (let i=0;i<newPopUps.length;i++) {
+      newPopUps[i].style.display = 'none'
+    }
   }
   for (let i=0;i<newInfos.length;i++) {
     newInfos[i].style.display = 'none'
+  }
+  for (let i=0;i<popups.length;i++) {
+    newPopUp()
   }
 }
 function newPopUp() {
@@ -66,11 +78,47 @@ function newPopUp() {
   newPopUps.push(newPop)
 }
 function openBig() {
-  popups[count%popups.length][1].style.display = 'block'
-  popups[count%popups.length][1].style.zIndex = '99'
+  idBig = window.event.target.parentNode.id
+  if (idBig.length > 10) {
+    idBig = idBig.charAt(11)
+    console.log(idBig)
+    console.log(popups[0][0])
+  }
+  popups[idBig%popups.length][1].style.display = 'block'
+  bg.style.display = 'block'
+  popups[idBig%popups.length][1].style.zIndex = '99'
 }
 function closeBig() {
-  popups[count%popups.length][1].style.display = 'none'
+  popups[idBig%popups.length][1].style.display = 'none'
+  bg.style.display = 'none'
+}
+function imgBig() {
+  let img = window.event.target
+  let newImg = new Image()
+  let newBg = document.createElement("div")
+  newImg.src = img.src
+  newImg.style.position = 'fixed'
+  newImg.style.left = '50%'
+  newImg.style.top = '50%'
+  newImg.style.maxWidth = '90%'
+  newImg.style.maxHeight = '90%'
+  newImg.style.transform = 'translate(-50%,-50%)'
+  newImg.style.zIndex = '101'
+  newBg.style.position = 'fixed'
+  newBg.style.width = '100vw'
+  newBg.style.height = '100vh'
+  newBg.style.zIndex = '100'
+  newBg.style.backdropFilter = 'blur(10px)'
+  indexContainer.appendChild(newImg)
+  indexContainer.appendChild(newBg)
+  newImg.addEventListener('click', function handleClick(event) {
+    newImg.remove()
+    newBg.remove()
+  })
+  newBg.addEventListener('click', function handleClick(event) {
+    newImg.remove()
+    newBg.remove()
+  })
 }
 function randomPosition(popups) {
   for (let i=0;i<popups.length;i++) {
@@ -92,6 +140,5 @@ function getRandomArray(array) {
     [array[currentIndex], array[randomIndex]] = [
       array[randomIndex], array[currentIndex]]
   }
-  console.log('%c  ♕ niki is king ♕  ','background: #ffffff; color: #00FF00')
   return array
 }
