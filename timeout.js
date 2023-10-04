@@ -1,6 +1,6 @@
 const info = document.getElementById("index-info")
 let countTime = 0
-let time = getRandomInt(10000,30000)
+let time = getRandomInt(15000,30000)
 const newInfos = []
 function showInfo() {
   countTime++

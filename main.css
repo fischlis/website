@@ -8,7 +8,9 @@ p,a,h1 {
 .imgafjsldkfj {
   width: 20vw;
 }
-
+#index-popup5 p {
+  color: rgb(211, 211, 255);
+}
 .text {
   font-family: 'Inter', sans-serif;
   font-size: 1.75vh;
@@ -33,7 +35,8 @@ p,a,h1 {
   width: 100%; /* no change*/
   height: 100%; /* no change*/
   overflow: hidden; /* no change*/
-  background-image: none;
+  background-image: url('/assets/images/background_mac_os.png');
+  background-repeat: no-repeat cover;
 }
 h1 {
   color: black;
@@ -46,7 +49,8 @@ h1 {
 }
 h1:hover {
   cursor: pointer; /* no change*/
-  transform: scale(1.25);
+  transform: scale(1.05);
+  color: white;
 }
 .index-menu {
   padding: 0 2vw;
