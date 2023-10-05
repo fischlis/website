@@ -34,7 +34,7 @@ first.id = count
 first.style.display = 'block'
 indexContainer.appendChild(first)
 newPopUps.push(first)
-console.log('%c  ♕ niki is king ♕  ','background: #ffffff; color: #00FF00')
+console.log('%c  ♕ IN NIKI WE TRUST xxx miles:) ♕  ','background: #ffffff; color: #00FF00')
 function closeAll() {
   bg.style.display = 'none'
   for (let i=0;i<popups.length;i++) {
