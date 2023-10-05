@@ -36,7 +36,7 @@ p,a,h1 {
   height: 100%; /* no change*/
   overflow: hidden; /* no change*/
   background-image: url('assets/images/background_mac_os.png');
-  background-repeat: no-repeat cover;
+  background-size: 100% 100%;
 }
 h1 {
   color: black;
@@ -465,12 +465,13 @@ h2 {
     color: rgb(34, 34, 34);
   }
   .index-closeBTN {
-    width: 4vw;
-    height: 4vw;
-    left: 0.5vh;
-    top: 0.5vh;
+    width: 8vw;
+    height: 8vw;
+    left: 1vh;
+    top: 1vh;
   }
   .futurism {
+    margin-top: 8%;
     width: 60vw;
   }
   .raf_cover {
@@ -478,23 +479,31 @@ h2 {
   }
   .satoshi_g {
     width: 70vw;
+    margin-top: 12%;
     }
   .type-illu {
     width: 80vw;
   }
   #illu_video {
+    margin-top: 25%;
     width: 50vw;
+  }
+  .aristokrat_cover {
+    margin-top: 5%;
+    width: 200%;
   }
   #video_rtfm01 {
     width: 60vw;
   }
   #video_cover {
+    margin-top: 12%;
     width: 100%;
   }
   .index-info h2 {
     font-size: 4vw;
   }
   #cover_text {
-    font-size: 3vw;
+    margin-top: 5%;
+    font-size: 4vw !important;
   }
 }

@@ -34,6 +34,7 @@ first.id = count
 first.style.display = 'block'
 indexContainer.appendChild(first)
 newPopUps.push(first)
+console.log('%c  ♕        niki is king          ♕  ','background: #ffffff; color: #00FF00')
 console.log('%c  ♕ IN NIKI WE TRUST xxx miles:) ♕  ','background: #ffffff; color: #00FF00')
 function closeAll() {
   bg.style.display = 'none'
@@ -67,12 +68,17 @@ function showAll() {
     newPopUp()
   }
 }
-function newPopUp() {
+function newPopUp(innerW) {
   count++
   let newPop = popups[count%popups.length][0].cloneNode(true)
   newPop.id = count
-  newPop.style.left = getRandomInt(5,70)+'%'
-  newPop.style.top = getRandomInt(5,55)+'%'
+  if (window.innerWidth < 600) {
+    newPop.style.left = getRandomInt(2,40)+'%'
+    newPop.style.top = getRandomInt(5,60)+'%'
+  } else {
+    newPop.style.left = getRandomInt(5,70)+'%'
+    newPop.style.top = getRandomInt(5,55)+'%'
+  }
   newPop.style.display = 'block'
   indexContainer.appendChild(newPop)
   newPopUps.push(newPop)
@@ -81,8 +87,6 @@ function openBig() {
   idBig = window.event.target.parentNode.id
   if (idBig.length > 10) {
     idBig = idBig.charAt(11)
-    console.log(idBig)
-    console.log(popups[0][0])
   }
   popups[idBig%popups.length][1].style.display = 'block'
   bg.style.display = 'block'
@@ -120,11 +124,21 @@ function imgBig() {
     newBg.remove()
   })
 }
-function randomPosition(popups) {
+function randomPosition(popups,innerW) {
+  if (window.innerWidth < 600) {
+    for (let i=0;i<popups.length;i++) {
+      popups[i][0].style.position = 'absolute'
+      popups[i][0].style.left = getRandomInt(2,40)+'%'
+      popups[i][0].style.top = getRandomInt(5,60)+'%'
+    }
+  } else {
+    for (let i=0;i<popups.length;i++) {
+      popups[i][0].style.position = 'absolute'
+      popups[i][0].style.left = getRandomInt(5,70)+'%'
+      popups[i][0].style.top = getRandomInt(5,55)+'%'
+    }
+  }
   for (let i=0;i<popups.length;i++) {
-    popups[i][0].style.position = 'absolute'
-    popups[i][0].style.left = getRandomInt(5,70)+'%'
-    popups[i][0].style.top = getRandomInt(5,55)+'%'
   }
 }
 function getRandomInt(min, max) {
