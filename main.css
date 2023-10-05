@@ -45,6 +45,7 @@ h1 {
   transform: scale(1);
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
+  white-space: nowrap;
 
 }
 h1:hover {
@@ -53,19 +54,20 @@ h1:hover {
   color: white;
 }
 .index-menu {
-  padding: 0 2vw;
+  padding: 0 2.25vw;
   position: fixed;
   color: black;
   left: 50%;
-  background: linear-gradient(180deg, rgba(225, 0, 0, 0.75) 10.94%, rgba(255, 255, 55, 0.75) 100%);;
+  background: linear-gradient(180deg, rgba(249, 54, 25, 0.75) 10.94%, rgba(255, 199, 43, 0.75) 100%);;
   transform: translate(-50%,0);
   font-family: 'Roboto', sans-serif;
   text-align: center;
   z-index: 99; /* no change*/
   font-size: 1vh;
   display: flex;
+  flex-wrap: nowrap;
   justify-content: space-between;
-  border: solid red 1px;
+  border: solid rgba(255, 62, 62, 0.715) 1px;
   border-radius: 8px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -460,11 +462,13 @@ h2 {
 /* mobile */
 @media (max-width: 600px) {
   h1 {
-    color: blue;
+    color: rgb(34, 34, 34);
   }
   .index-closeBTN {
     width: 4vw;
     height: 4vw;
+    left: 0.5vh;
+    top: 0.5vh;
   }
   .futurism {
     width: 60vw;
