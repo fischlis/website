@@ -15,6 +15,7 @@ p,a,h1 {
   font-family: 'Inter', sans-serif;
   font-size: 1.75vh;
   margin: 1vw;
+  text-align: center;
 }
 
 .title {
@@ -22,6 +23,7 @@ p,a,h1 {
   font-size: 2.5vh;
   width: 100%;
   margin: 1vw;
+  text-align: center;
 }
 #cover_text {
   font-family: 'Inter', sans-serif;
@@ -35,17 +37,18 @@ p,a,h1 {
   width: 100%; /* no change*/
   height: 100%; /* no change*/
   overflow: hidden; /* no change*/
-  background-image: url('assets/images/background_mac_os.png');
+  background-image: url('assets/images/miles_os_01.jpg');
   background-size: 100% 100%;
 }
 h1 {
-  color: black;
+  color: white;
   display: inline-block;  /*no change*/
   margin: 0;
   transform: scale(1);
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
   white-space: nowrap;
+  font-weight: normal;
 
 }
 h1:hover {
@@ -54,24 +57,37 @@ h1:hover {
   color: white;
 }
 .index-menu {
-  padding: 0 2.25vw;
+  /* padding: 0 2.25vw; */
   position: fixed;
-  color: black;
-  left: 50%;
-  background: linear-gradient(180deg, rgba(249, 54, 25, 0.75) 10.94%, rgba(255, 199, 43, 0.75) 100%);;
-  transform: translate(-50%,0);
-  font-family: 'Roboto', sans-serif;
+  color: white;
+  left: 0;
+  top: 0;
+  height: 5%;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(155,200,255,0.75) 0%, rgba(26,82,255,0.75) 10%, rgba(69,121,255,0.75) 90%, rgba(155,200,255,0.75) 100%);
+  /* transform: translate(-50%,0); */
+  font-family: 'Inter', sans-serif;
   text-align: center;
   z-index: 99; /* no change*/
-  font-size: 1vh;
+  font-size: 1vw;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-  border: solid rgba(255, 62, 62, 0.715) 1px;
+  /* border: solid rgba(8, 59, 213, 0.75) 1px; */
   border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.index-menuText {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  margin-top: 1%;
+  grid-gap: 50px;
+  text-shadow: 1px 1px 2px black,
+  0 0 1em blue,
+  0 0 0.2em blue;
+  font-style: italic;
 }
 .index-popup {
   background: rgb(255,255,255);
@@ -285,10 +301,11 @@ h1:hover {
   flex-direction: column;
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 50px;
 }
 .container_text {
-  width: 100%;
+  max-width: 70%;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 6px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -462,7 +479,7 @@ h2 {
 /* mobile */
 @media (max-width: 600px) {
   h1 {
-    color: rgb(34, 34, 34);
+    font-size: 5vw;
   }
   .index-closeBTN {
     width: 8vw;
